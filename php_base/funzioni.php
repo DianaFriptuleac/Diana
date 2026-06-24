@@ -54,6 +54,50 @@ nomeFunzione()  -> andra ad esseguire la funzione
         return $nr_1 + $nr_2;
     }
     echo somma(553, 83);
+
+    echo "<hr>";
+
+    //---------------------------------------------------------------------------------
+
+    function somma_2(int $nr_1, int $nr_2): int
+    {
+        $total = $nr_1 + $nr_2;
+
+        return $total;
+    }
+    echo somma_2(553, 83);
+    echo "<hr>";
+
+    //---------------------------------------------------------------------------------
+
+    function somma_3(?int $nr_1, ?int $nr_2): int
+    {
+        if ($nr_1 === null || $nr_2 === null) {
+            return 0;
+        }
+
+        return $nr_1 + $nr_2;
+    }
+    echo somma_3(553, null);
+    echo "<hr>";
+
+    //---------------------------------------------------------------------------------
+    function somma_4(int $num1, int $num2): int
+    {
+        if ($num1 > 0 && $num2 > 0) {
+            return $num1 + $num2;
+        } elseif ($num1 == 0 && $num2 == 0) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+    echo somma_4(10, 20);    // 30
+    echo "<hr>";
+    echo somma_4(0, 0);  // 0
+    echo "<hr>";
+    echo somma_4(-5, 20);    // -1
+    echo "<hr>";
     ?>
 </body>
 
