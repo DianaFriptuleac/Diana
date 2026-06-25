@@ -3,7 +3,7 @@ include 'header.php';
 ?>
 <body>
     <main>
-        <div class="container">
+        <div class="form-container">
             <h1>Login System 1</h1>
 
             <!--form, definisce il modulo, action = login.php con il metodo = POST-->
@@ -34,11 +34,11 @@ include 'header.php';
 
                     if($email === $emailCorrente && $password === $passwordCorrente){
                         echo"<div class='login_success'>";
-                        echo "<p>Login effettuato con successo</p>";
+                        echo "<p>Login effettuato con successo!</p>";
                          echo"</div>";
                     }else{
                          echo"<div class='login_error'>";
-                         echo "<p>Email o password non corretti</p>";
+                         echo "<p>Email o password non corretti.</p>";
                           echo"</div>";
                     }
 

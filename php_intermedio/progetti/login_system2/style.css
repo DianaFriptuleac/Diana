@@ -4,7 +4,10 @@ body{
     padding: 0px;
     background-color: rgb(206, 220, 245);
 }
-.container{
+h1{
+    color: rgb(3, 3, 95);
+}
+.form-container{
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -17,7 +20,11 @@ form{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 300px;
+    width: 50%;
+      background-color: rgba(170, 170, 243, 0.56);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 1px 2px 5px #292626;
 
 }
 input,
