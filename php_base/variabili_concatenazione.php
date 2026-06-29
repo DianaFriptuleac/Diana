@@ -91,5 +91,3 @@ echo "<br>";
 
 var_dump($linguaggi);
 echo "<br>";
-
-?>

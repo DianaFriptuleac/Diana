@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="it">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login System 1</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Admin</title>
 </head>
+<body>
+    <h1>Admin Page</h1>
+    
+</body>
+</html>

@@ -1,35 +1,17 @@
 <?php
-//require_once -> serve a caricare il contenuto di un altro file PHP
-require_once "utenti.php";
+include "header.php";
+require_once "db.php";
 require_once "functions.php";
 
-// include -> file html
-include "header.php";
-
-// POST
-// Il metodo della richiesta è esattamente la stringa POST?
-// Esegui questo codice solo se la pagina è stata aperta inviando il form
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-
-    // dati form
-    //name="email" → viene letto con $_POST["email"]
-    //name="password" → viene letto con $_POST["password"]
-    $email = $_POST["email"] ?? "";      //ternary operator
+    $email = $_POST["email"] ?? "";
     $password = $_POST["password"] ?? "";
 
-    // $nome = $valore ? true : false;     -> es. ternary
-
-    // creazione chiave login
-    $loginKey = createLoginKey($email, $password);
-    // ricerca utente nel DB
-    $utente = trovaUtente($loginKey, getUtenti());
+    $key = createKey($email, $password);
+    $user = searchUser($key, getUsers());
 
     echo "<h2>Risultato Login</h2>";
-
-
-
-    if ($utente) {
+    if ($user) {
         echo
         // Inizio del codice JavaScript
         " <script>
@@ -39,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 //titolo popup
                 title: 'Acesso effettuato',
-                text: 'Benvenuto {$utente['email']}',
+                text: 'Benvenuto {$user['email']}',
 
                 //testo sul btn del popup
                 confirmButtonText: 'Continua'
@@ -48,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }).then(() => {
 
             // Controlla il ruolo dell'utente
-    switch ('{$utente['ruolo']}') {
+    switch ('{$user['ruolo']}') {
 
     //  // Se il ruolo è admin
         case 'admin':
@@ -57,12 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
            window.location.href = 'admin.php';
             break;
 
-        case 'docente':
-            window.location.href = 'docente.php';
-            break;
-
-        case 'studente':
-           window.location.href = 'studente.php';
+        case 'user':
+           window.location.href = 'user.php';
             break;
 
         default:

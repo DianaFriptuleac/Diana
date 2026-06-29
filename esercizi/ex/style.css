@@ -53,8 +53,3 @@ button{
     color: red;
     font-weight: bold;
 }
-
-.carousel-item img{
-    height: 400px;
-    object-fit: cover;
-}

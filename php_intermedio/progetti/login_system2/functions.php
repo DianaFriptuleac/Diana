@@ -12,10 +12,14 @@ function createLoginKey(string $email, string $password): string
 //Scorre tutti gli utenti e verifica se  esiste o uguale
 
 function trovaUtente(string $loginKey, array $utenti): ?array    // ?array -> restituisce un array ma se esiste o =
+// string $loginKey = chiave di login da cercare
+// array $utenti = lista di tutti gli utenti
 {
     foreach ($utenti as $utente) {
+        // Crea la chiave di login dell'utente corrente usando email e password
         $key = createLoginKey($utente["email"], $utente["password"]);
 
+        // Controlla se la chiave ricevuta è uguale alla chiave appena creata  -> se ok -> restituisce tutto l'array dell'utente
         if ($loginKey === $key) {
             return $utente;
         }
