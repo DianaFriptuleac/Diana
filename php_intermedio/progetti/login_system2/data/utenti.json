@@ -1,0 +1,62 @@
+[
+    {
+        "utenteId": 1,
+        "nome": "Simone",
+        "cognome": "Margini",
+        "email": "simone.margini@live.it",
+        "password": "$2y$10$o\/HP2\/t5.7v\/oqM3Pjpto.2DcXpSrRz0E\/LmO9ByD6lMFUpXWOGfe",
+        "sesso": "M",
+        "dataNascita": "2026-06-30",
+        "citta": "Reggio Emilia",
+        "nazionalita": "Italiana",
+        "ruolo": "studente"
+    },
+    {
+        "utenteId": 2,
+        "nome": "Simone",
+        "cognome": "Margini",
+        "email": "simone.margini4@live.it",
+        "password": "$2y$10$odoQBw1iu34G.CVBVYDzu.0\/blztOdmMMdnnjPen6SPqUz\/vav8ze",
+        "sesso": "M",
+        "dataNascita": "2026-06-30",
+        "citta": "Reggio Emilia",
+        "nazionalita": "Italiana",
+        "ruolo": "studente"
+    },
+    {
+        "utenteId": 3,
+        "nome": "Diana",
+        "cognome": "Dorojuc",
+        "email": "dianadorojuc3@gmail.com",
+        "password": "$2y$10$Cgofox1lvz9B2ch6CSc7CetAg7vZs53ijlrWQx6WlfilGxIdVsMuS",
+        "sesso": "M",
+        "dataNascita": "1999-01-03",
+        "citta": "Italia",
+        "nazionalita": "Italiana",
+        "ruolo": "studente"
+    },
+    {
+        "utenteId": 4,
+        "nome": "Alina",
+        "cognome": "Dorojuc",
+        "email": "alinadorojuc3@gmail.com",
+        "password": "$2y$10$F.19RCn6AOWb5xKt.AJ0duU0MPZAZNdQizsKoBx9gvEPGknnZujGK",
+        "sesso": "F",
+        "dataNascita": "1999-01-03",
+        "citta": "Italia",
+        "nazionalita": "Italiana",
+        "ruolo": "admin"
+    },
+    {
+        "utenteId": 5,
+        "nome": "Diana",
+        "cognome": "Friptuleac",
+        "email": "dianadorojuc33@gmail.com",
+        "password": "$2y$10$qHiv.lC7NHNiGjjbYBDB8.OYgVdHdruizlIWcqlIzZUlMujbVJiBy",
+        "sesso": "F",
+        "dataNascita": "2026-06-03",
+        "citta": "Reggio Nell Emilia",
+        "nazionalita": "Italiana",
+        "ruolo": "docente"
+    }
+]

@@ -1,6 +1,6 @@
 <?php
 //require_once -> serve a caricare il contenuto di un altro file PHP
-require_once "utenti.php";
+//require_once "utenti.php";
 require_once "functions.php";
 
 // include -> file html
@@ -23,7 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // creazione chiave login
     $loginKey = createLoginKey($email, $password);
     // ricerca utente nel DB
-    $utente = trovaUtente($loginKey, getUtenti());
+    //$utente = trovaUtente($loginKey, getUtenti());
+    $file = creaFileJSON();
+    $utente = leggiUtenti($file);
 
     echo "<h2>Risultato Login</h2>";
 
